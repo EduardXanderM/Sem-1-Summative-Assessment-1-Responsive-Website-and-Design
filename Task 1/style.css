@@ -1,0 +1,514 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #e9e9e9;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 50px auto 0px;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    transition: 0.4s all;
+    font-size: 1em;
+}
+
+.nav-item a:hover {
+    color: #998c8c; 
+    transition: 0.4s all;
+}
+
+.content-container {
+    width: 80%;
+    background: white;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 7.7em;
+    padding: 50px 0px 0px 50px;
+}
+
+h2{
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 2.5em;
+    margin: 0px 0px 50px 50px;
+}
+
+h3 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 2.5em;
+    margin: 50px 0px;
+}
+
+h4 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.01em;
+    line-height: 1.2em;
+}
+
+.first-paragraph {
+    font-size: 1.2em;
+    width: 60%;
+    margin: 0px 50px 50px 50px;
+}
+
+.main-content {
+    width: 90%;           
+    height: 850px;         
+    column-count: 3;      
+    column-gap: 2%;       
+    column-fill: auto;   
+    overflow: hidden;
+    margin: 50px auto; 
+}
+
+.main-content h3:first-child {
+    margin-top: 0px;
+}
+
+.main-content p {
+    margin: 30px 0px;
+}
+
+.featured {
+    grid-area: featured;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.album1 {
+    grid-area: album1;
+}
+
+.album2 {
+    grid-area: album2;
+}
+
+.album3 {
+    grid-area: album3;
+}
+
+.album4 {
+    grid-area: album4;
+}
+
+.pic-grid > * {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pic-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pic-grid {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "featured featured album1 album2"
+        "featured featured album3 album4";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 50px 0px;
+}
+
+.profile-text {
+    grid-area: texts;
+}
+
+.profile-text h4 {
+    text-align: center;
+}
+
+.profile-pic {
+    grid-area: pic;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.profile-grid {
+    max-width: 70%;
+    display: grid;
+    grid-template-areas: 
+        "texts texts pic";
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px auto 0px auto;
+    padding-bottom: 50px;
+}
+
+.footer-content {
+    background: #14181d;
+    color: white;
+    width: 80%;
+    height: 60px;
+    justify-items: center;
+    align-content: center;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+/* Adjusts Main Content */
+
+@media (max-width: 1280px) {
+    .main-content {
+        height: 950px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .main-content {
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .main-content {
+        column-count: 2;
+        height: 1150px;
+    }
+}
+
+/* Tablet View 720px to 1024px */
+
+@media (min-width: 719px) and (max-width: 1024px) {
+    .logo {
+        width: 13%;
+        padding-bottom: 30px;
+    }
+
+    .nav-grid {
+        margin: 30px auto;
+    }
+    
+    .nav-item a {
+        font-size: 1.3em;
+    }
+    
+    .content-container h1, h2, h3, h4 {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    h1 {
+        font-size: 5.2em;
+        margin: 30px auto 0px;
+    }
+    
+    h2 {
+        font-size: 3em;
+        width: 70%;
+        margin: 0px auto 30px;
+        line-height: 1.2em;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
+
+    h4 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
+
+    .first-paragraph {
+        width: 85%;
+        margin: 30px auto;
+        justify-content: center;
+        font-size: 1.6em;
+    }
+
+    .main-content {
+        column-count: 1;
+        height: auto;
+    }
+
+    .main-content p {
+        margin: 30px 30px;
+    }
+
+    .pic-grid {
+        grid-template-areas: 
+            "album1 album 2"
+            "album3 album4";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .featured {
+        display: none;
+    }
+
+    .profile-grid {
+        grid-template-areas: 
+            "texts pic";
+        grid-template-columns: 60% 1fr;
+        max-width: 90%;
+        margin: 30px auto 0px;
+    }
+
+    .profile-pic img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer-content {
+        padding: 30px 0px;
+    }
+}
+
+/* Large Mobile view 540px to 719px */
+
+@media (min-width: 540px) and (max-width: 719px) {
+    .logo {
+        width: 15%;
+        padding-bottom: 20px;
+    }
+
+    .nav-grid {
+        width: 100%;
+        margin: 20px auto;
+    }
+    
+    .nav-item a {
+        font-size: 1.3em;
+    }
+
+    .content-container {
+        width: 100%;
+    }
+    
+    .content-container h1, h2, h3, h4 {
+        text-align: center;
+        margin: 20px auto;
+        padding-left: 0px;
+    }
+
+    h1 {
+        font-size: 5.3em;
+    }
+    
+    h2 {
+        font-size: 3.5em;
+        width: 70%;
+        
+    }
+
+    h3 {
+        font-size: 3.5em;
+    }
+
+    h4 {
+        font-size: 3.5em;
+    }
+
+    p {
+        font-size: 1.5em;
+        line-height: 1.4em;
+    }
+
+    .first-paragraph {
+        width: 85%;
+        margin: 20px auto;
+        justify-content: center;
+        font-size: 1.8em;
+    }
+
+    .main-content {
+        column-count: 1;
+        line-height: 5.5em;
+        height: auto;
+    }
+
+    .main-content p {
+        margin: 20px 20px;
+    }
+
+    .pic-grid {
+        grid-template-areas: 
+            "album1"
+            "album2"
+            "album4"
+            "album3";
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        display: none;
+    }
+
+    .profile-grid {
+        grid-template-areas: 
+            "pic"
+            "texts";
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 20px 30px 30px;
+    }
+
+    .profile-pic img {
+        width: 40%;
+        margin: auto;
+    }
+
+    .profile-text {
+        margin: 20px auto 0px;
+    }
+
+    .footer-content {
+        padding: 20px 0px;
+        width: 100%;
+    }
+}
+
+/* Small Mobile view up to 539px */
+
+@media (min-width: 320px) and (max-width: 539px) {
+    .logo {
+        width: 25%;
+        padding-bottom: 12px;
+    }
+
+    .nav-grid {
+        width: 100%;
+        margin: 12px auto;
+    }
+    
+    .nav-item a {
+        font-size: 1.1em;
+    }
+
+    .content-container {
+        width: 100%;
+    }
+    
+    .content-container h1, h2, h3, h4 {
+        text-align: center;
+        margin: 12px auto;
+        padding-left: 0px;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+            width: 78%;
+            
+    }
+
+    h3 {
+        font-size: 2.5em;
+    }
+
+    h4 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
+
+    .first-paragraph {
+        width: 90%;
+        margin: 12px auto;
+        justify-content: center;
+        font-size: 1.5em;
+        padding-top: 12px;
+    }
+
+    .main-content {
+        column-count: 1;
+        line-height: 5.5em;
+        height: auto;
+    }
+
+    .main-content p {
+        margin: 12px 12px;
+    }
+
+    .pic-grid {
+        grid-template-areas: 
+            "album1"
+            "album2"
+            "album4"
+            "album3";
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        display: none;
+    }
+
+    .profile-grid {
+        grid-template-areas: 
+            "pic"
+            "texts";
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 12px 20px 20px;
+    }
+
+    .profile-pic img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .profile-text {
+        margin: 12px auto;
+    }
+
+    .profile-text p {
+        font-size: 1.2em;
+    }
+
+    .footer-content {
+        padding: 12px 0px;
+        width: 100%;
+        font-size: 0.8em;
+    }
+}
